@@ -12,7 +12,7 @@ Bei der Objektspeicherung werden die Daten als einzelne Objekte und nicht als Da
 
 Aufgrund seiner flachen Dateistruktur ist die Objektspeicherung praktisch unbegrenzt skalierbar und ermöglicht die Speicherung großer Mengen unstrukturierter Daten. Die Daten werden oft über mehrere physische Systeme und Einrichtungen repliziert, was eine hohe Verfügbarkeit und Haltbarkeit gewährleistet.
 
-![Object Storage Type](https://github.com/DanielW1987/aws-notes/blob/master/figures/object-storage-type.png)
+![Object Storage Type](https://github.com/DanielWagner87/aws-s3/blob/master/object-storage-type.png)
 
 Der Zugriff auf die Objektspeicherung erfolgt in der Regel über REST via HTTP. Objekte in S3 werden in einer flachen Struktur ohne Hierarchie gespeichert. Die Container der obersten Ebene, in denen Objekte gespeichert werden, werden als Buckets bezeichnet. Obwohl es keine Hierarchie gibt, unterstützt S3 das Konzept von Ordnern zur Organisation (Gruppierung von Objekten).
 
@@ -22,7 +22,7 @@ Dateispeicherserver speichern Daten in einer hierarchischen Struktur mit Dateien
 
 Ein Dateisystem wird über das Netzwerk auf einen Client-Computer gemountet, wo es dann für das Lesen und Schreiben von Daten zugänglich wird. Dateien und Ordner können erstellt, aktualisiert und gelöscht werden.
 
-![File Storage Type](https://github.com/DanielW1987/aws-notes/blob/master/figures/file-storage-type.png)
+![File Storage Type](https://github.com/DanielWagner87/aws-s3/blob/master/file-storage-type.png)
 
 Auf einem gemounteten Dateisystem können nur Operationen auf Dateiebene durchgeführt werden, es ist nicht möglich, Befehle auf Blockebene auszugeben oder die zugrunde liegenden Speicher-Volumes zu formatieren oder zu partitionieren. Die Dateispeicherung ist einfach zu implementieren und zu verwenden und im Allgemeinen recht kostengünstig. Anwendungsfälle sind Web-Serving und Content-Management, gemeinsam genutzte Unternehmensverzeichnisse, Home-Laufwerke, Datenbank-Backups und große Datenanalyse-Workloads.
 
@@ -34,7 +34,7 @@ EFS ist ein regionaler AWS-Dienst und bietet eine hohe Verfügbarkeit und Haltba
 
 Die Daten werden in Blöcken innerhalb von Sektoren und Spuren gespeichert und verwaltet sowie von einem serverbasierten Betriebssystem gesteuert. Blockspeicher-Volumes erscheinen für das Betriebssystem als lokale Platten und können partitioniert und formatiert werden.
 
-![Block Storage Type](https://github.com/DanielW1987/aws-notes/blob/master/figures/block-storage-type.png)
+![Block Storage Type](https://github.com/DanielWagner87/aws-s3/blob/master/block-storage-type.png)
 
 Blockspeicher wird normalerweise in SAN-Umgebungen (Storage Area Network) verwendet, die das Fibre-Channel-Protokoll (FC) sowie Ethernet-Netzwerke mit Protokollen wie iSCSI oder Fibre Channel over Ethernet (FCoE) verwenden. Blockspeicher ist in der Regel teurer als Objekt- oder Dateispeicher, bietet jedoch eine geringe Latenzzeit sowie eine hohe und konsistente Leistung. Die Kosten sind bei SAN-Implementierungen aufgrund der erforderlichen Spezialausrüstung oft am höchsten. Amazon Elastic Block Store (EBS) ist der AWS-Dienst für die Blockspeicherung. EBS bietet persistente Blockspeicher-Volumen für die Verwendung mit EC2-Instanzen.
 
