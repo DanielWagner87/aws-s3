@@ -63,7 +63,7 @@ Amazon S3 bietet eine robuste, sichere, globale Infrastruktur und eine robuste D
   - Container für Datenspeicherung
   - Region-spezifische Ressource
   - sollte idealerweise in der Region angelegt werden, wo es verwendet wird (gerine Latenz)
-  - Ein Bucket kann undendlich viele Objekte beinhalten
+  - Ein Bucket kann unendlich viele Objekte beinhalten
   - Muss einen global eindeutigen Namen haben
   - Es gibt kein Konzept von Ordnern, die UI erlaubt uns virtuelle Ordner zur Strukturierung
 - Object:
